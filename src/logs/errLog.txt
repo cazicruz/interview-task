@@ -1,0 +1,38 @@
+20250117	12:03:09	dead95f6-50a9-4397-b708-ab05e7f3c89f	Error: User already exists
+20250117	12:06:36	73962ad0-93ff-4cac-82b8-587ef4d36c13	Error: User already exists
+20250117	12:08:07	9c64ffa2-3541-4273-ad09-7d80c6af5c21	Error: User already exists
+20250117	12:12:02	b648af46-1b2a-41fa-8b9e-070764ebcfea	Error: User already exists
+20250117	12:16:18	8f0f9149-0fa9-4345-a4ca-967d97767271	Error: User already exists
+20250117	12:16:23	1cc219e2-c8fb-4c57-afe3-8c96ed10c44f	Error: User already exists
+20250117	12:20:23	55c4258e-f7e9-4172-bea6-b2df28c4c15a	Error: User already exists
+20250117	12:22:22	4690df61-7f83-48e2-b976-6837f8b28666	Error: User already exists
+20250117	12:28:51	3762de4f-ccaa-4c44-b447-b4cbb676a51e	Error: User already exists
+20250117	12:29:51	481c8e4a-c124-46a1-8406-edd7c14b5f02	Error: User already exists
+20250117	18:35:28	41d04b44-358c-4bf7-b9f4-ab531866df4b	PrismaClientValidationError: 
+Invalid `prismaClient.user.findUnique()` invocation in
+C:\Users\UMOGBAI JOVITA\Desktop\paid gigs folder\interview task\src\services\accountService.ts:58:49
+
+  55 
+  56 
+  57 public async getBalance(user_id: string){
+→ 58     const balance = await prismaClient.user.findUnique({
+           where: {
+             id: undefined,
+         ?   email?: String,
+         ?   AND?: UserWhereInput | UserWhereInput[],
+         ?   OR?: UserWhereInput[],
+         ?   NOT?: UserWhereInput | UserWhereInput[],
+         ?   name?: StringNullableFilter | String | Null,
+         ?   password?: StringFilter | String,
+         ?   balance?: FloatFilter | Float,
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   sentTransactions?: TransactionListRelationFilter,
+         ?   receivedTransactions?: TransactionListRelationFilter
+           },
+           select: {
+             balance: true
+           }
+         })
+
+Argument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.
